@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Task - 1: Below patterns depend on the input, i.e. the number of rows is odd or even,</h1>
+        <h4>open console to see output</h4>
+
+        <script>
+            let inputrow = prompt();
+let string = "";
+for (let i = 1; i <= inputrow; i++) {
+  
+  for (let j = inputrow; j > i; j--) {
+    string += " ";
+  }
+  for (let k = 0; k < i * 2 - 1; k++) {
+    if (k === 0 || k === 2 * i - 2) {
+      string += "*";
+    }
+    else {
+      string += " ";
+    }
+  }
+  string += "\n";
+}
+for (let i = 1; i <= inputrow - 1; i++) {
+    
+    for (let j = 0; j < i; j++) {
+      string += " ";
+    }
+    
+    for (let k = (inputrow - i) * 2 - 1; k >= 1; k--) {
+      if (k === 1 || k === (inputrow - i) * 2 - 1) {
+        string += "*";
+      }
+      else {
+        string += " ";
+      }
+    }
+    string += "\n";
+  }
+console.log(string);
+        </script>
+</body>
+</html>
